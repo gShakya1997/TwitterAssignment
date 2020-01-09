@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,7 @@ public class RegisterActivityEmail extends AppCompatActivity {
         actionButtons();
     }
 
-    private void actionButtons(){
+    private void actionButtons() {
         imgBtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,11 +50,43 @@ public class RegisterActivityEmail extends AppCompatActivity {
         btnNextEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!validateEmail() | !validateName()) {
+                    return;
+                }
                 Intent intentRSS = new Intent(RegisterActivityEmail.this, RegisterActivitySecondStep.class);
                 startActivity(intentRSS);
                 finish();
             }
         });
+    }
+
+    private boolean validateEmail() {
+        String regEmail = etRegEmail.getText().toString().trim();
+        if (regEmail.isEmpty()) {
+            etRegEmail.setError("Please enter a valid email");
+            return false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(regEmail).matches()) {
+            etRegEmail.setError("Please enter a valid email");
+            return false;
+        } else {
+            etRegEmail.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateName() {
+        String regName = etRegName.getText().toString().trim();
+
+        if (regName.isEmpty()) {
+            etRegName.setError("What's your name");
+            return false;
+        } else if (regName.length() > 50) {
+            etRegName.setError("Name too long");
+            return false;
+        } else {
+            etRegName.setError(null);
+            return true;
+        }
     }
 
     private void binding() {
