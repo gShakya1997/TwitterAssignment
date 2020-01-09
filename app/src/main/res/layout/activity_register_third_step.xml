@@ -56,26 +56,22 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/etRegName"
+            <TextView
+                android:id="@+id/etRegNameFinal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="160dp"
                 android:background="@drawable/bodercolor"
-                android:hint="Name"
-                android:inputType="textPersonName"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/etRegEmail"
+            <TextView
+                android:id="@+id/etRegEmailFinal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="60dp"
                 android:background="@drawable/bodercolor"
-                android:hint="Email address"
-                android:inputType="textEmailAddress"
                 android:textSize="20sp" />
 
             <TextView

@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.study.twitter.R;
 import com.study.twitter.activities.GettingStartedActivity;
+import com.study.twitter.model.DataTransfer;
 
 public class RegisterActivityPhone extends AppCompatActivity {
     private ImageView imgBtnBack;
@@ -53,7 +54,9 @@ public class RegisterActivityPhone extends AppCompatActivity {
                 if (!validateName() | !validateEmail()){
                     return;
                 }
-                Intent intentRSS = new Intent(RegisterActivityPhone.this, RegisterActivitySecondStep.class);
+                DataTransfer.name = etRegNameP.getText().toString().trim();
+                DataTransfer.emailphone = etRegPhone.getText().toString().trim();
+                Intent intentRSS = new Intent(getApplicationContext(), RegisterActivitySecondStep.class);
                 startActivity(intentRSS);
                 finish();
             }

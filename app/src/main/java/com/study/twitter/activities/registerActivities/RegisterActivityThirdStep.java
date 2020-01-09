@@ -21,9 +21,10 @@ import com.study.twitter.activities.webviewActivities.WebViewCookie;
 import com.study.twitter.activities.webviewActivities.WebViewPO;
 import com.study.twitter.activities.webviewActivities.WebViewPP;
 import com.study.twitter.activities.webviewActivities.WebViewTerms;
+import com.study.twitter.model.DataTransfer;
 
 public class RegisterActivityThirdStep extends AppCompatActivity {
-    private TextView textView3;
+    private TextView textView3, etRegNameFinal, etRegEmailFinal;
     private Button btnSignUp;
     private ImageView imgBtnBackThirdStep;
 
@@ -33,6 +34,10 @@ public class RegisterActivityThirdStep extends AppCompatActivity {
         setContentView(R.layout.activity_register_third_step);
         binding();
         actionButtons();
+
+        etRegNameFinal.setText(DataTransfer.name);
+        etRegEmailFinal.setText(DataTransfer.emailphone);
+
         String text = "By signing up, you agree to the Terms of service and Privacy Policy, including Cookie Use. Others will be able to find you by email or phone number when provided Privacy Options";
         SpannableString ss = new SpannableString(text);
 
@@ -121,5 +126,7 @@ public class RegisterActivityThirdStep extends AppCompatActivity {
         textView3 = findViewById(R.id.textView3);
         btnSignUp = findViewById(R.id.btnSignUp);
         imgBtnBackThirdStep = findViewById(R.id.imgBtnBackThirdStep);
+        etRegEmailFinal = findViewById(R.id.etRegEmailFinal);
+        etRegNameFinal = findViewById(R.id.etRegNameFinal);
     }
 }
