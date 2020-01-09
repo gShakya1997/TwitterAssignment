@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.registerActivities.RegisterActivityFourthStep"></activity>
+        <activity android:name=".activities.registerActivities.RegisterActivityFifthStep"></activity>
+        <activity android:name=".activities.registerActivities.RegisterActivityFourthStep" />
         <activity android:name=".activities.registerActivities.RegisterActivityThirdStep" />
         <activity android:name=".activities.webviewActivities.WebViewHelp" />
         <activity android:name=".activities.webviewActivities.WebViewPP" />
