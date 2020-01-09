@@ -71,6 +71,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/ic_add_a_photo_black_24dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
