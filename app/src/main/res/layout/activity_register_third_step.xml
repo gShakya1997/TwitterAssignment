@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".activities.registerActivities.RegisterActivityThirdStep">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/imgBtnBackThirdStep"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:contentDescription="back"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.446"
+                app:layout_constraintStart_toEndOf="@+id/imgBtnBackThirdStep"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topPanel"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="Create your account"
+                android:textColor="#000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etRegName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/bodercolor"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etRegEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/bodercolor"
+                android:hint="Email address"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="90dp"
+                android:text="By signing up, you agree to the Terms of service and Privacy Policy, including Cookie Use. Others will be able to find you by email or phone number when provided Privacy Options"
+                android:textColor="#316363"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="300dp"
+                android:layout_height="43dp"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btnshape"
+                android:text="Sign up"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
