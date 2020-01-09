@@ -15,7 +15,7 @@ public class WebViewTerms extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view_help);
         webView = findViewById(R.id.webView);
-        webView.loadUrl("https://help.twitter.com/en/managing-your-account/new-account-settings");
+        webView.loadUrl("https://twitter.com/en/tos#new");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setBuiltInZoomControls(true);

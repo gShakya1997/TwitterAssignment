@@ -17,6 +17,10 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".activities.registerActivities.RegisterActivityThirdStep"></activity>
         <activity android:name=".activities.webviewActivities.WebViewHelp" />
+        <activity android:name=".activities.webviewActivities.WebViewPP" />
+        <activity android:name=".activities.webviewActivities.WebViewPO" />
+        <activity android:name=".activities.webviewActivities.WebViewTerms" />
+        <activity android:name=".activities.webviewActivities.WebViewCookie" />
         <activity android:name=".activities.registerActivities.RegisterActivitySecondStep" />
         <activity android:name=".activities.registerActivities.RegisterActivityPhone" />
         <activity android:name=".activities.registerActivities.RegisterActivityEmail" />
