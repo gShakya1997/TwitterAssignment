@@ -106,6 +106,15 @@ public class RegisterActivityThirdStep extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivityThirdStep.this,RegisterActivityFourthStep.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void binding() {
