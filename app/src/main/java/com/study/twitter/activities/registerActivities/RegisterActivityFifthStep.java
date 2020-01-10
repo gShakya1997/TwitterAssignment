@@ -16,12 +16,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.study.twitter.R;
+import com.study.twitter.api.UsersAPI;
+import com.study.twitter.serverResponse.ImageResponse;
+import com.study.twitter.url.Url;
 
 import java.io.File;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import retrofit2.Call;
 
 
 public class RegisterActivityFifthStep extends AppCompatActivity {
@@ -91,6 +95,9 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
         File file = new File(imgPath);
         RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
         MultipartBody.Part body = MultipartBody.Part.createFormData("imgfile",file.getName(),requestBody);
+        UsersAPI usersAPI = Url.getInstance().create(UsersAPI.class);
+        Call<ImageResponse> responseCall = usersAPI.uploadImage(body);
+
     }
 
     private void binding(){
