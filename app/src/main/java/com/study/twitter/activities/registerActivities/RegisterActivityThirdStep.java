@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -36,7 +37,12 @@ public class RegisterActivityThirdStep extends AppCompatActivity {
         actionButtons();
 
         etRegNameFinal.setText(DataTransfer.name);
-        etRegEmailFinal.setText(DataTransfer.emailphone);
+        if (DataTransfer.email != null){
+            etRegEmailFinal.setText(DataTransfer.email);
+        } else {
+            etRegEmailFinal.setText(DataTransfer.phone);
+        }
+
 
         String text = "By signing up, you agree to the Terms of service and Privacy Policy, including Cookie Use. Others will be able to find you by email or phone number when provided Privacy Options";
         SpannableString ss = new SpannableString(text);

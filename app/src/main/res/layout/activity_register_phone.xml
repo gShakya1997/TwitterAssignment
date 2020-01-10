@@ -57,27 +57,38 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etRegNameP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/bodercolor"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                android:textSize="20sp" />
+                android:layout_margin="30dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="50">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etRegPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
+                android:layout_margin="30dp"
+                app:errorEnabled="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
-                android:background="@drawable/bodercolor"
                 android:hint="Phone number"
                 android:inputType="number"
                 android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <androidx.constraintlayout.widget.ConstraintLayout

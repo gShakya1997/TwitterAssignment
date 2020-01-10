@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.study.twitter.R;
 import com.study.twitter.activities.GettingStartedActivity;
 import com.study.twitter.model.DataTransfer;
@@ -19,7 +21,7 @@ import com.study.twitter.model.DataTransfer;
 public class RegisterActivityEmail extends AppCompatActivity {
     private ImageView imgBtnBack;
     private TextView tvSignUpTypePhone;
-    private EditText etRegName, etRegEmail;
+    private TextInputLayout etRegName, etRegEmail;
     private Button btnNextEmail;
 
     @Override
@@ -55,8 +57,8 @@ public class RegisterActivityEmail extends AppCompatActivity {
                 if (!validateEmail() | !validateName()) {
                     return;
                 }
-                DataTransfer.name = etRegName.getText().toString().trim();
-                DataTransfer.emailphone = etRegEmail.getText().toString().trim();
+                DataTransfer.name = etRegName.getEditText().getText().toString().trim();
+                DataTransfer.email = etRegEmail.getEditText().getText().toString().trim();
                 Intent intentRSS = new Intent(getApplicationContext(), RegisterActivitySecondStep.class);
                 startActivity(intentRSS);
                 finish();
@@ -65,7 +67,7 @@ public class RegisterActivityEmail extends AppCompatActivity {
     }
 
     private boolean validateEmail() {
-        String regEmail = etRegEmail.getText().toString().trim();
+        String regEmail = etRegEmail.getEditText().getText().toString().trim();
         if (regEmail.isEmpty()) {
             etRegEmail.setError("Please enter a valid email");
             return false;
@@ -79,7 +81,7 @@ public class RegisterActivityEmail extends AppCompatActivity {
     }
 
     private boolean validateName() {
-        String regName = etRegName.getText().toString().trim();
+        String regName = etRegName.getEditText().getText().toString().trim();
 
         if (regName.isEmpty()) {
             etRegName.setError("What's your name");

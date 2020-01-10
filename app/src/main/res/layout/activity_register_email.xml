@@ -46,6 +46,7 @@
             android:layout_below="@+id/topPanel"
             android:orientation="vertical">
 
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
@@ -56,27 +57,42 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <EditText
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etRegName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/bodercolor"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                android:textSize="20sp" />
+                android:layout_margin="30dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="50">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/etRegEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/bodercolor"
-                android:hint="Email address"
-                android:inputType="textEmailAddress"
-                android:textSize="20sp" />
+                android:layout_margin="30dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
