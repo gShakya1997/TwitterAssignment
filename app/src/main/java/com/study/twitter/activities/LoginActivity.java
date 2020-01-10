@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity implements PopupMenu.OnMenu
         LoginBLL loginBLL = new LoginBLL();
         StrictModeClass.StrictMode();
         if (loginBLL.checkUser(username, password)) {
-            Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
+            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
             startActivity(intent);
             finish();
         } else {

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="59dp"
+            android:layout_height="81dp"
+            android:src="@drawable/noimage" />
+
+        <TextView
+            android:id="@+id/tweetTv"
+            android:layout_width="318dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="35dp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/nameTv"
+            android:layout_toRightOf="@+id/nameTv"
+            app:srcCompat="@drawable/ic_correct" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="89dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="301dp"
+            android:layout_marginLeft="301dp"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/ic_correct" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="right"
+            android:layout_marginStart="290dp"
+            android:layout_marginLeft="290dp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_toRightOf="@+id/imgProfile"
+            android:gravity="center|right"
+            android:text="10"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/imgProfile"
+            android:layout_marginTop="17dp"
+            android:gravity="fill_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_common_small">
+
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:focusable="true"
+                android:padding="@dimen/dimen_common_small"
+                app:srcCompat="@drawable/ic_chat" />
+
+            <TextView
+                android:id="@+id/commentNoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="right"
+                android:gravity="center|right"
+                android:text="200"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnbell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:focusable="true"
+                android:padding="@dimen/dimen_common_small"
+                android:tint="@color/gray_deep"
+                app:srcCompat="@drawable/ic_repeat_black_24dp" />
+
+            <TextView
+                android:id="@+id/retweetNoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="right"
+                android:gravity="center|right"
+                android:text="2020"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnbell2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:focusable="true"
+                android:padding="@dimen/dimen_common_small"
+                android:tint="@color/google_red"
+                app:srcCompat="@drawable/ic_heart" />
+
+            <TextView
+                android:id="@+id/likesNoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="right"
+                android:gravity="center|right"
+                android:text="210"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:focusable="true"
+                android:padding="@dimen/dimen_common_small"
+                android:tint="@color/gray_deep"
+                app:srcCompat="@drawable/ic_menu_share" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

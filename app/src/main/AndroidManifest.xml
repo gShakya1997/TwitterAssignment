@@ -16,9 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".activities.DashboardActivity"
-            android:label="@string/title_activity_dashboard"></activity>
+        <activity android:name=".activities.DashboardActivity"></activity>
         <activity android:name=".activities.registerActivities.RegisterActivityFifthStep" />
         <activity android:name=".activities.registerActivities.RegisterActivityFourthStep" />
         <activity android:name=".activities.registerActivities.RegisterActivityThirdStep" />
