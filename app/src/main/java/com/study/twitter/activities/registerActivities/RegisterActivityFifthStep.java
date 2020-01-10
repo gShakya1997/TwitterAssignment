@@ -86,6 +86,14 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
             }
         });
 
+        imgBtnUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                browseImg();
+            }
+        });
+
+
         btnSignUpFinal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,13 +102,6 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
                 Intent intent = new Intent(RegisterActivityFifthStep.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
-            }
-        });
-
-        imgBtnUpload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                browseImg();
             }
         });
     }
@@ -114,7 +115,7 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
     private void saveImgOnly() {
         File file = new File(imgPath);
         RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
-        MultipartBody.Part body = MultipartBody.Part.createFormData("imagefile", file.getName(), requestBody);
+        MultipartBody.Part body = MultipartBody.Part.createFormData("imageFile", file.getName(), requestBody);
         UsersAPI usersAPI = Url.getInstance().create(UsersAPI.class);
         Call<ImageResponse> responseCall = usersAPI.uploadImage(body);
         StrictModeClass.StrictMode(); //from StrictModeClass
@@ -128,7 +129,7 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
         }
     }
 
-    private void register(){
+    private void register() {
         String username = DataTransfer.name;
         String password = DataTransfer.password;
         String email = DataTransfer.email;
@@ -141,8 +142,8 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
         registerResponseCall.enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                if (!response.isSuccessful()){
-                    Toast.makeText(RegisterActivityFifthStep.this, "Code "+response.code(), Toast.LENGTH_SHORT).show();
+                if (!response.isSuccessful()) {
+                    Toast.makeText(RegisterActivityFifthStep.this, "Code " + response.code(), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Toast.makeText(RegisterActivityFifthStep.this, "Successfully registered", Toast.LENGTH_SHORT).show();
@@ -150,7 +151,7 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
-                Toast.makeText(RegisterActivityFifthStep.this, "Error "+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivityFifthStep.this, "Error " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
