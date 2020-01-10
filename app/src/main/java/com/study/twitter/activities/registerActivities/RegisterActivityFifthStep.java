@@ -17,6 +17,13 @@ import android.widget.Toast;
 
 import com.study.twitter.R;
 
+import java.io.File;
+
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+
+
 public class RegisterActivityFifthStep extends AppCompatActivity {
     private ImageView imgBtnBackFifthStep;
     private ImageButton imgBtnUpload;
@@ -78,6 +85,12 @@ public class RegisterActivityFifthStep extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         startActivityForResult(intent, 0);
+    }
+
+    private void saveImgOnly(){
+        File file = new File(imgPath);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+        MultipartBody.Part body = MultipartBody.Part.createFormData("imgfile",file.getName(),requestBody);
     }
 
     private void binding(){
